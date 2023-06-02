@@ -27,7 +27,7 @@
                 width: 1.5rem;
             }
 
-            .wrap {
+            .wrap, .wrap2 {
                 width: 100%;
                 margin: 0 auto;
                 text-align: center;
@@ -76,3 +76,6 @@
                 animation: myslide3; /*use tabindex="0" attribute in css to focus on img. focus used to change state onclick.*/
                 box-shadow: 5px 5px 0px rgb(78, 44, 0);
             }
+            #letter_content strong {
+                font-weight: bold;
+              }

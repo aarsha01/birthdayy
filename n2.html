@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>To Jazzir.</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./index.css">
+    <link rel="icon" href="./resource/shivi.jpeg">
+    
+    <style>
+        #letter_content {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="letter_content"></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script>
+        var textIndex = 0;
+        var texts = [
+            "03-06-2023",
+            "For my comfort person,",
+            "Happy 21st Birthday!",
+            "So many months passed and we had such a rollercoaster kinda experiences, there are things I wanna say to you...",
+            " I get scared... I know you might not be thinking like me. But you know, I just think:",
+            "What if they think you're just a rebound?",
+            " What if we don't work out?",
+            "What if you have to be a lesson just like every other?",
+            "what if they keep pointing fingers on us bcz of me?",
+            "i have millions of questions...u answer all of them patiently but i question then, what if u dont mean it and ur just saying for my sake. u tell me how i make u do things ...how i make u learn or understand those little things. it's beautiful . I've never seen something so beautiful than us. Are we real? if not , this is the best dream and just don't wake me up. i'll be honest, i tried putting us into words...and i never feel anything is enough. There's a quote i read somewhere which kinda feels like our our kinda like love:",
+            "       ",
+            "   ",
+            "\"That holding hands at bus stops kinda love and \"No, sleep on the call\" kinda love and the \"shh, I'll hold it\" to \"it's okay I'm holding it\" kinda love and \"this is our song\" kinda love and \"i love it when you rant\" kinda love and writing letters with different colour pens and drawing tiny hearts on it kinda love and hugging tight and never wanting to let go kinda love and \"17 new voice messages\" kinda love and let's buy same pairs of shoes together kinda love and \"I made you a playlist\" kinda love. The \"we'll build a home one day\" kinda love. The soft kinda love, The hopeless kinda love, The love kinda love\"",
+            "     ",
+            "  ",
+            "i mean every word of it. You feel like a tight hug on bad days. i just dont know how can i let people know why i dont wanna give up on u eventhough i should,",
+            "How I tried putting on so many walls",
+            "How I tried to make you give up on me",
+            "How I kept reminding you that we can't be a forever thing",
+            "How you made me give up on stuffs that I did to put walls between us",
+            "You've become a habit",
+            "When they tell me 'don't let him think that this is a forever thing'",
+            "How do I tell them I can't just tell that to even myself",
+            "How do I tell them I don't wanna give up on you",
+            "How do I tell them I'm in love with that cringey guy",
+            "How do I tell them everything he said made me rethink about myself",
+            "How do I tell them I find comfort in him than I ever found in them",
+           "there's so many untold words that i just decide to not speak and just agree with them.'yeah i keep reminding him that dont worry' it freaking hurts everytime i have to say this.",
+           " some tell me they want his physical touch to feel the love, some tell me they need to be assured that its a forever thing, some tell me they'll just marry someone else if he couldnt be good enough for her in future...how do i tell them i love u without any of these conditions, how do i make sense to them? i wont ...i dont know how to love with all these logics. i just cant and i wont."
+];
+
+        $(document).ready(function() {
+            typeWriter();
+        });
+
+        var typingSpeed = 50; // Adjust the typing speed here (lower value = faster speed)
+
+function typeWriter() {
+    var text = texts[textIndex];
+    var index = 0;
+    var interval = setInterval(function() {
+        if (index < text.length) {
+            $("#letter_content").append(text.charAt(index));
+            index++;
+        } else {
+            clearInterval(interval);
+            textIndex++;
+            if (textIndex >= texts.length) {
+                $("#letter_content").append('<a href="n3.html" class="start">Click Me</a>'); // Add the "Click Me" link
+                $(".start").click(function() {
+                    window.location.href = $(this).attr("href"); // Redirect to n3.html when the link is clicked
+                });
+            }
+            $("#letter_content").append("<br>"); // Add line break after each line of text
+            setTimeout(typeWriter, 1000);
+        }
+    }, typingSpeed);
+}
+
+// typeWriter();
+
+    </script>
+</body>
+</html>
